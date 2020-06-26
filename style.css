@@ -33,15 +33,18 @@ main {
   align-items: center;
 }
 .left {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   width: 50%;
-  height: 100%;
+  height: 90%;
   margin: 12px;
   background-image: url(./images/brain_left.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-size: 270px;
+  /* background-size: 270px; */
   background-position: right;
-  position: relative;
+  /* position: relative; */
   z-index: 0;
   /*   animation-name: Brainleft;
   animation-duration: 5s;
@@ -60,19 +63,22 @@ main {
   height: 60px;
   font-size: 4rem;
   color: rgb(32, 32, 32);
-  position: absolute;
+  /* position: absolute;
   top: 276px;
-  left: 436px;
-  z-index: 1;
+  left: 436px; */
+  /* z-index: 1; */
 }
 .right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin: 12px;
   width: 50%;
-  height: 100%;
+  height: 90%;
   background-image: url(./images/brain_right.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-size: 270px;
+  /* background-size: 270px; */
   background-position: left;
   position: relative;
   z-index: 0;
@@ -82,9 +88,10 @@ main {
   height: 60px;
   font-size: 4rem;
   color: rgb(32, 32, 32);
-  position: absolute;
+  margin-left: 25px;
+  /* position: absolute;
   top: 276px;
-  left: 312px;
+  left: 312px; */
   z-index: 1;
 }
 main div div a {
