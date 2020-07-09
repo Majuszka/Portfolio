@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAJA</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <nav class="subnav">
+          <button class="subnav-btn">
+            <a href="./index.html">Majka</a>
+          </button>
+          <ul class="subnav-content">
+            <li class="list-item">
+              <a href="./DESIGN.html" target="_blank" rel="noopener noreferrer"
+                >design</a
+              >
+            </li>
+            <li class="list-item">
+              <a href="./WEBDEV.html" target="_blank" rel="noopener noreferrer"
+                >web dev</a
+              >
+            </li>
+            <li class="list-item">
+              <a href="./aboutme.html" target="_blank" rel="noopener noreferrer"
+                >about me</a
+              >
+            </li>
+            <li class="list-item">
+              <a href="./contact.html" target="_blank" rel="noopener noreferrer"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </nav>
+    </header>
+    <i class="fas fa-brain"></i>
+    <main>
+      <form action="POST">
+        <fieldset>
+          <legend>Write to me!</legend>
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" />
+          <label for="company">Company:</label>
+          <input type="text" name="company" id="company" />
+          <label for="subject">Subject:</label>
+          <input type="text" name="subject" id="subject" />
+          <label for="mail">E-mail:</label>
+          <input type="email" name="mail" id="mail" />
+          <label for="tel">Telephone:</label>
+          <input type="tel" name="tel" id="tel" />
+          <label for="text">Message:</label>
+          <textarea name="msg" id="msg" cols="30" rows="10"> </textarea>
+          <input type="submit" value="submit" />
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
