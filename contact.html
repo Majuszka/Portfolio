@@ -8,61 +8,96 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script defer src="/./js/all.js"></script>
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="topbar">
         <nav class="subnav">
-          <button class="subnav-btn">
+          <button class="majka-btn">
+            <a class="i" href="./index.html"
+              ><i class="fas fa-brain fa-1x"></i
+            ></a>
             <a href="./index.html">Majka</a>
           </button>
           <ul class="subnav-content">
             <li class="list-item">
-              <a href="./DESIGN.html" target="_blank" rel="noopener noreferrer"
-                >design</a
-              >
+              <a href="./aboutme.html">about me</a>
             </li>
-            <li class="list-item">
-              <a href="./WEBDEV.html" target="_blank" rel="noopener noreferrer"
-                >web dev</a
-              >
-            </li>
-            <li class="list-item">
-              <a href="./aboutme.html" target="_blank" rel="noopener noreferrer"
-                >about me</a
-              >
-            </li>
-            <li class="list-item">
-              <a href="./contact.html" target="_blank" rel="noopener noreferrer"
-                >contact</a
-              >
+            <li class="list-item here">
+              <a href="#">contact</a>
             </li>
           </ul>
         </nav>
       </nav>
     </header>
-    <i class="fas fa-brain"></i>
-    <main>
+    <section>
+      <button class="nav-design-button button-1">
+        <a href="./WEBDEV.html"
+          ><i class="fas fa-code fa-1x"></i>&nbsp; web dev</a
+        >
+      </button>
+      <button class="nav-web-dev-button button-2">
+        <a href="./DESIGN.html"
+          ><i class="fas fa-palette fa-1x"></i>&nbsp; design</a
+        >
+      </button>
+    </section>
+    <div class="contact-main">
+      <aside class="left"></aside>
       <form action="POST">
         <fieldset>
-          <legend>Write to me!</legend>
+          <legend>Get in contact</legend>
           <label for="name">Name:</label>
-          <input type="text" name="name" id="name" />
-          <label for="company">Company:</label>
-          <input type="text" name="company" id="company" />
+          <input type="text" name="name" id="name" placeholder="John" />
+          <label for="company">Company/Project Name:</label>
+          <input
+            type="text"
+            name="company"
+            id="company"
+            placeholder="write if there is any"
+          />
           <label for="subject">Subject:</label>
-          <input type="text" name="subject" id="subject" />
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="main goal of the project"
+          />
           <label for="mail">E-mail:</label>
-          <input type="email" name="mail" id="mail" />
+          <input
+            type="email"
+            name="mail"
+            id="mail"
+            placeholder="john@gmail.com"
+          />
           <label for="tel">Telephone:</label>
-          <input type="tel" name="tel" id="tel" />
+          <input type="tel" name="tel" id="tel" placeholder="+49 xxx xxx xxx" />
           <label for="text">Message:</label>
-          <textarea name="msg" id="msg" cols="30" rows="10"> </textarea>
-          <input type="submit" value="submit" />
+          <textarea
+            name="msg"
+            id="msg"
+            cols="30"
+            rows="10"
+            placeholder="write here something about your project"
+          >
+          </textarea>
+          <input class="submit" type="submit" value="submit" />
         </fieldset>
       </form>
-    </main>
+      <aside class="right"></aside>
+    </div>
   </body>
 </html>
