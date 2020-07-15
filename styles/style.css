@@ -59,7 +59,7 @@ header {
   width: 200px;
   font-family: "Righteous", cursive;
   font-size: 2em;
-  color: #272727;
+  color: #3d3d3d;
   background-color: #a7c90e;
   cursor: pointer;
   border: none;
@@ -91,24 +91,11 @@ p {
   top: 90px;
 }
 
-.about-me {
-  color: #ebebeb;
-  width: 100%;
-  height: 72px;
-  border-radius: 3px;
-}
-
-.left button a,
-.right button a {
-  text-decoration: none;
-  color: #272727;
-}
-
 .majka-btn a,
 .subnav-content a,
 .nav-design-button a,
 .nav-web-dev-button a {
-  color: #272727;
+  color: #3d3d3d;
   text-decoration: none;
   letter-spacing: 9px;
 }
@@ -126,9 +113,32 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+main .left {
+  background-image: url(../images/brain_left.png);
+  background-position: right;
+}
+
+main .right {
+  background-image: url(../images/brain_right.png);
+  background-position: left;
+}
+
+main .left,
+main .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 5px;
+  width: 24%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 20px;
 }
 
 .left-webdev {
@@ -142,22 +152,6 @@ main {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-left: 12px;
-}
-
-.left,
-.right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 5px;
-  width: 24%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-top: 20px;
 }
 
 .nav-design-button,
@@ -175,26 +169,14 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ebebeb;
-  letter-spacing: 13px;
-  font-weight: 600;
   border: none;
 }
 
-.left {
-  background-image: url(../images/brain_left.png);
-  background-position: right;
-}
-
-.right {
-  background-image: url(../images/brain_right.png);
-  background-position: left;
-}
-
-.accordion {
-  width: 70%;
-  margin-left: 30px;
-  height: auto;
+.nav-web-dev-button {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .contact-main {
@@ -212,14 +194,16 @@ main {
 
 .contact-left {
   background-image: url(../images/brain_left.png);
-  /* background-position: right; */
-  /* width: 20%; */
+  background-repeat: no-repeat;
+  width: 30%;
+  height: auto;
 }
 
 .contact-right {
   background-image: url(../images/brain_right.png);
-  /* background-position: left; */
-  /* width: 20%; */
+  background-repeat: no-repeat;
+  width: 30%;
+  height: auto;
 }
 
 section {
@@ -232,14 +216,6 @@ section {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.button-1 {
-  width: 49%;
-}
-
-.button-2 {
-  width: 50%;
 }
 
 form {
@@ -255,65 +231,207 @@ form {
       -ms-flex-align: center;
           align-items: center;
   font-size: 2rem;
-  width: 50%;
+  width: 40%;
 }
 
-legend {
+form fieldset {
+  padding: 22px;
+  border: 1px solid #a1a1a1;
+}
+
+form fieldset legend {
   font-size: 2rem;
   text-align: center;
   font-style: italic;
 }
 
-fieldset {
-  padding: 22px;
-  border: 1px solid #a1a1a1;
-}
-
-label {
+form fieldset label {
   margin-top: 18px;
   font-size: 1.5rem;
   margin-left: 16px;
   display: block;
 }
 
-input {
+form fieldset input {
   padding: 8px;
   width: 95%;
   margin: 0 9px;
 }
 
-::-webkit-input-placeholder {
+form fieldset ::-webkit-input-placeholder {
   font-style: italic;
   font-size: medium;
 }
 
-:-ms-input-placeholder {
+form fieldset :-ms-input-placeholder {
   font-style: italic;
   font-size: medium;
 }
 
-::-ms-input-placeholder {
+form fieldset ::-ms-input-placeholder {
   font-style: italic;
   font-size: medium;
 }
 
-::placeholder {
+form fieldset ::placeholder {
   font-style: italic;
   font-size: medium;
 }
 
-textarea {
+form fieldset textarea {
   max-width: 600px;
   width: 95%;
   margin: 9px;
 }
 
-.submit {
+form fieldset .submit {
   border-radius: 3px;
   border: none;
   background-color: #a7c90e;
   width: 95%;
   height: 50px;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #3d3d3d;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.here {
+  padding: 6px;
+  border-bottom: 0.5px solid whitesmoke;
+}
+
+.about-me h2 {
+  margin-top: 20px;
+  padding: 12px;
+  text-align: center;
+  color: #3d3d3d;
+  letter-spacing: 9px;
+  font-size: 5rem;
+}
+
+/* .about-me {
+  background-image: url(../images/bg-4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 55vw;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+} */
+.work-ex {
+  padding: 12px;
+  text-align: center;
+  color: #3d3d3d;
+  letter-spacing: 9px;
+  font-size: 2rem;
+}
+
+.content p {
+  padding: 22px;
+  font-size: medium;
+}
+
+.button-underline a {
+  padding: 6px;
+  border-bottom: 0.5px solid #929292;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 990px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #0a0a0a;
+  text-align: center;
+}
+
+/* .white-bg {
+  background-color: rgb(255, 255, 255);
+  width: 51%;
+  height: 100%;
+} */
+.web-dev-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.design-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.scroll {
+  margin-top: 40px;
+  padding: 40px;
+  background-color: white;
+  width: 35%;
+  margin-right: 370px;
+}
+
+h4 {
+  font-size: 6.5rem;
+}
+
+h1 {
+  margin: 20px;
+}
+
+p {
+  font-size: 3rem;
+}
+
+.scroll a {
+  font-size: 4rem;
+  letter-spacing: 30px;
+  padding: 22px;
+}
+
+.scrollspy-example {
+  height: 700px;
+  overflow: scroll;
 }
 
 .here a {
@@ -343,7 +461,7 @@ a:hover {
 }
 
 .list-item:hover {
-  background-color: #272727;
+  background-color: #3d3d3d;
   border-radius: 3px;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -367,14 +485,14 @@ a:hover {
 }
 
 .nav-design-button:hover {
-  background-color: #272727;
+  background-color: #3d3d3d;
   border-radius: 3px;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 .nav-web-dev-button:hover {
-  background-color: #272727;
+  background-color: #3d3d3d;
   border-radius: 3px;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -456,6 +574,55 @@ a:hover {
   .right:hover {
     animation-play-state: paused;
     -webkit-animation-play-state: paused;
+  }
+  .topbar:hover .subnav-content {
+    color: #ebebeb;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /*  .majka-btn {
+    padding-bottom: 50px;
+  } */
+  .subnav-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   main {
     display: -webkit-box;

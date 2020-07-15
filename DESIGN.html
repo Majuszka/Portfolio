@@ -21,13 +21,25 @@
     />
     <script defer src="/./js/all.js"></script>
     <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <nav class="topbar">
         <nav class="subnav">
           <button class="majka-btn">
-            <a href="./index.html"><i class="fas fa-brain fa-1x"></i></a>
+            <a class="i" href="./index.html"
+              ><i class="fas fa-brain fa-1x"></i
+            ></a>
             <a href="./index.html">Majka</a>
           </button>
           <ul class="subnav-content">
@@ -41,21 +53,82 @@
         </nav>
       </nav>
     </header>
-    <main class="nav-left-right">
-      <div class="left">
-        <button class="nav-design-button">
-          <a href="./WEBDEV.html"
-            ><i class="fas fa-code fa-1x"></i>&nbsp; web dev</a
-          >
-        </button>
+    <section>
+      <button class="nav-design-button">
+        <a href="./WEBDEV.html"
+          ><i class="fas fa-code fa-1x"></i>&nbsp; web dev</a
+        >
+      </button>
+      <button class="nav-web-dev-button button-underline">
+        <a href="#"><i class="fas fa-palette fa-1x"></i></a
+        ><a href="">&nbsp; design</a>
+      </button>
+    </section>
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-100"
+            src="https://majkadesigncom.files.wordpress.com/2020/01/www_lfc_1-1.jpg?w=2000&h="
+            alt="First slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>User interface (UI) design</h5>
+            <p>Please go and visite my works <span>www.majadesign.net</span></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="https://majkadesigncom.files.wordpress.com/2020/01/ksiazki-8-1.jpg?w=1000&h="
+            alt="Second slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="https://majkadesigncom.files.wordpress.com/2020/01/duzy-format-8.jpg?w=1000&h="
+            alt="Third slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="https://majkadesigncom.files.wordpress.com/2020/01/cd-1-1.jpg?w=1000&h="
+            alt="Fourth slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="https://majkadesigncom.files.wordpress.com/2020/01/wizyt-w-kolku-2-1.jpg?w=1000&h="
+            alt="Fifth slide"
+          />
+        </div>
       </div>
-      <div class="right">
-        <button class="nav-web-dev-button">
-          <a href="./DESIGN.html"
-            ><i class="fas fa-palette fa-1x"></i>&nbsp; design</a
-          >
-        </button>
-      </div>
-    </main>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   </body>
 </html>

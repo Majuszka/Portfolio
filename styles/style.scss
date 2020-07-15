@@ -54,15 +54,7 @@ p {
   left: 0;
   top: 90px;
 }
-.about-me {
-  color: $white-color;
-  @include button();
-}
-.left button a,
-.right button a {
-  text-decoration: none;
-  color: $grey-color;
-}
+
 .majka-btn a,
 .subnav-content a,
 .nav-design-button a,
@@ -77,7 +69,27 @@ main {
   @include bg();
   background-position: center;
   height: 55vw;
-  @include flex-center();
+  display: flex;
+  justify-content: center;
+
+  .left {
+    background-image: url(../images/brain_left.png);
+    background-position: right;
+  }
+  .right {
+    background-image: url(../images/brain_right.png);
+    background-position: left;
+  }
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    width: 24%;
+    height: 100%;
+    @include bg();
+    margin-top: 20px;
+  }
 }
 .left-webdev {
   display: flex;
@@ -85,39 +97,15 @@ main {
   justify-content: flex-start;
   margin-left: 12px;
 }
-.left,
-.right {
-  display: flex;
-  align-items: center;
-  margin: 5px;
-  width: 24%;
-  height: 100%;
-  @include bg();
-  margin-top: 20px;
-}
 .nav-design-button,
 .nav-web-dev-button {
   @include button();
   font-size: 2rem;
   @include flex-center();
-  background-color: $white-color;
-  letter-spacing: 13px;
-  font-weight: 600;
   border: none;
 }
-
-.left {
-  background-image: url(../images/brain_left.png);
-  background-position: right;
-}
-.right {
-  background-image: url(../images/brain_right.png);
-  background-position: left;
-}
-.accordion {
-  width: 70%;
-  margin-left: 30px;
-  height: auto;
+.nav-web-dev-button {
+  flex-direction: row;
 }
 
 //CONTACT
@@ -129,67 +117,188 @@ main {
 }
 .contact-left {
   background-image: url(../images/brain_left.png);
-  /* background-position: right; */
-  /* width: 20%; */
+  background-repeat: no-repeat;
+  width: 30%;
+  height: auto;
 }
 .contact-right {
   background-image: url(../images/brain_right.png);
-  /* background-position: left; */
-  /* width: 20%; */
+  background-repeat: no-repeat;
+  width: 30%;
+  height: auto;
 }
 section {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.button-1 {
-  width: 49%;
-}
-.button-2 {
-  width: 50%;
-}
 form {
   position: relative;
   top: 40px;
   @include flex-center();
   font-size: 2rem;
-  width: 50%;
+  width: 40%;
+
+  fieldset {
+    padding: 22px;
+    border: 1px solid rgb(161, 161, 161);
+
+    legend {
+      font-size: 2rem;
+      text-align: center;
+      font-style: italic;
+    }
+    label {
+      margin-top: 18px;
+      font-size: 1.5rem;
+      margin-left: 16px;
+      display: block;
+    }
+    input {
+      padding: 8px;
+      width: 95%;
+      margin: 0 9px;
+    }
+    ::placeholder {
+      font-style: italic;
+      font-size: medium;
+    }
+    textarea {
+      max-width: 600px;
+      width: 95%;
+      margin: 9px;
+    }
+    .submit {
+      border-radius: 3px;
+      border: none;
+      background-color: $green-color;
+      width: 95%;
+      height: 50px;
+    }
+  }
 }
-legend {
-  font-size: 2rem;
+
+//ABOUT ME
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
   text-align: center;
-  font-style: italic;
+  outline: none;
+  font-size: 15px;
 }
-fieldset {
+
+.active,
+.collapsible:hover {
+  background-color: rgb(61, 61, 61);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.here {
+  padding: 6px;
+  border-bottom: 0.5px solid rgb(245, 245, 245);
+}
+.about-me h2 {
+  margin-top: 20px;
+  padding: 12px;
+  text-align: center;
+  color: $grey-color;
+  letter-spacing: 9px;
+  font-size: 5rem;
+}
+/* .about-me {
+  background-image: url(../images/bg-4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 55vw;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+} */
+.work-ex {
+  padding: 12px;
+  text-align: center;
+  color: $grey-color;
+  letter-spacing: 9px;
+  font-size: 2rem;
+}
+.content p {
   padding: 22px;
-  border: 1px solid rgb(161, 161, 161);
-}
-label {
-  margin-top: 18px;
-  font-size: 1.5rem;
-  margin-left: 16px;
-  display: block;
-}
-input {
-  padding: 8px;
-  width: 95%;
-  margin: 0 9px;
-}
-::placeholder {
-  font-style: italic;
   font-size: medium;
 }
-textarea {
-  max-width: 600px;
-  width: 95%;
-  margin: 9px;
+
+//WEB DEV
+
+//DESIGN
+
+.button-underline a {
+  padding: 6px;
+  border-bottom: 0.5px solid rgb(146, 146, 146);
 }
-.submit {
-  border-radius: 3px;
-  border: none;
-  background-color: $green-color;
-  width: 95%;
-  height: 50px;
+.carousel {
+  width: 100%;
+}
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 990px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(10, 10, 10);
+  text-align: center;
+}
+/* .white-bg {
+  background-color: rgb(255, 255, 255);
+  width: 51%;
+  height: 100%;
+} */
+.web-dev-main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.design-main {
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-end;
+}
+.scroll {
+  margin-top: 40px;
+  padding: 40px;
+  background-color: white;
+  width: 35%;
+  margin-right: 370px;
+}
+h4 {
+  font-size: 6.5rem;
+}
+h1 {
+  margin: 20px;
+}
+p {
+  font-size: 3rem;
+}
+.scroll a {
+  font-size: 4rem;
+  letter-spacing: 30px;
+  padding: 22px;
+}
+.scrollspy-example {
+  height: 700px;
+  overflow: scroll;
 }
 
 //ACTIVE
@@ -311,6 +420,22 @@ a:hover {
   .right:hover {
     animation-play-state: paused;
     -webkit-animation-play-state: paused;
+  }
+  .topbar:hover .subnav-content {
+    color: $white-color;
+    @include flex-center();
+    flex-direction: column;
+  }
+  /*  .majka-btn {
+    padding-bottom: 50px;
+  } */
+  .subnav-content {
+    @include flex-center();
+    flex-direction: column;
+  }
+  section {
+    @include flex-center();
+    flex-direction: column;
   }
   main {
     @include flex-center();

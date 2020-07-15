@@ -27,7 +27,9 @@
       <nav class="topbar">
         <nav class="subnav">
           <button class="majka-btn">
-            <a href="./index.html"><i class="fas fa-brain fa-1x"></i></a>
+            <a class="i" href="./index.html"
+              ><i class="fas fa-brain fa-1x"></i
+            ></a>
             <a href="./index.html">Majka</a>
           </button>
           <ul class="subnav-content">
@@ -41,20 +43,67 @@
         </nav>
       </nav>
     </header>
-    <main class="nav-left-right">
-      <div class="left">
-        <button class="nav-design-button">
-          <a href="./WEBDEV.html"
-            ><i class="fas fa-code fa-1x"></i>&nbsp; web dev</a
+    <section>
+      <button class="nav-design-button button-underline">
+        <a href="#"><i class="fas fa-code fa-1x"></i></a
+        ><a href="">&nbsp; web dev</a>
+      </button>
+      <button class="nav-web-dev-button">
+        <a href="./DESIGN.html"><i class="fas fa-palette fa-1x"></i></a
+        ><a href="./DESIGN.html">&nbsp; design</a>
+      </button>
+    </section>
+    <main class="design-main">
+      <div class="scroll">
+        <div id="list-example" class="list-group">
+          <a class="list-group-item list-group-item-action" href="#list-item-1"
+            >HTML</a
           >
-        </button>
-      </div>
-      <div class="right">
-        <button class="nav-web-dev-button">
-          <a href="./DESIGN.html"
-            ><i class="fas fa-palette fa-1x"></i>&nbsp; design</a
+          <a class="list-group-item list-group-item-action" href="#list-item-2"
+            >CSS</a
           >
-        </button>
+          <a class="list-group-item list-group-item-action" href="#list-item-3"
+            >JAVA SCRIPT</a
+          >
+          <a class="list-group-item list-group-item-action" href="#list-item-4"
+            >NODE</a
+          >
+        </div>
+        <div
+          data-spy="scroll"
+          data-target="#list-example"
+          data-offset="0"
+          class="scrollspy-example"
+        >
+          <h1 id="list-item-1">HTML</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            accusantium fuga odit? Odit ullam, culpa, eveniet provident,
+            quisquam voluptates aperiam delectus est odio nesciunt amet. Optio
+            consequuntur dolore nobis suscipit.
+          </p>
+          <h1 id="list-item-2">CSS</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+            assumenda debitis neque tempora quod cupiditate aspernatur mollitia
+            ab quos, aliquid est? Repudiandae, deleniti vel ad laudantium dolore
+            voluptatem soluta inventore.
+          </p>
+          <h1 id="list-item-3">JAVA SCRIPT</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+            nostrum minima. Explicabo distinctio iure magni necessitatibus iste,
+            doloremque accusamus corrupti repudiandae quam officia perspiciatis
+            doloribus ipsam mollitia tempora quo reprehenderit?
+          </p>
+          <h1 id="list-item-4">NODE</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+            maiores non laboriosam provident illum eveniet sed vero quia
+            accusantium explicabo! Repellendus, aspernatur officia. Delectus qui
+            ab odit, quaerat a rerum.
+          </p>
+        </div>
       </div>
     </main>
   </body>
